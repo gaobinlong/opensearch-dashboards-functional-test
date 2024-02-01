@@ -12,7 +12,7 @@ if (Cypress.env('SECURITY_ENABLED')) {
       cy.getElementByTestId('toggleNavButton').click();
       cy.get('span[title="Discover"]').click();
       cy.getElementByTestId('shareTopNavButton').click();
-      cy.getElementByTestId('copyShareUrlButton').click();
+      cy.getElementByTestId('copyShareUrlButton').focus().realClick();
 
       // Capture the copied content
       cy.window().then((win) => {
